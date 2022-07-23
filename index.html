@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Business Site</title>
+
+    <!-- ----------------------bootstrap link css------------------------------------ -->
+    <link rel="stylesheet" href="bootstrap-link/bootstrap.min.css" />
+    <!-- ----------------------------extrnal css link----------------------------------------- -->
+    <link rel="stylesheet" href="business-style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ------------------------header start--------------------------------- -->
+
+    <header>
+      <nav id="topnav">
+        <a class="logo" href=""
+          ><p class="rasellogo">Computer Engineer</p>
+          <div class="imgdiv">
+            <img src="card/mainlogo-removebg-preview.png" alt="" srcset="" />
+          </div>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="course.html">COURSE</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li>
+              <a href="documen.html">OUR SERVICES</a>
+            </li>
+            <li class="nav-item mt-3 mt-lg-0" id="li">
+              <button
+                onclick="document.getElementById('id01').style.display='block'"
+                style="width: auto"
+              >
+                Login
+              </button>
+
+              <div id="id01" class="modal">
+                <form
+                  class="modal-content animate p-3"
+                  action="/action_page.php"
+                  method="post"
+                >
+                  <div class="imgcontainer">
+                    <span
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="close"
+                      title="Close Modal"
+                      >&times;</span
+                    >
+                    <img
+                      src="card/round local image.jpg"
+                      alt="Avatar"
+                      class="avatar"
+                    />
+                  </div>
+
+                  <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input
+                      type="text"
+                      placeholder="Enter Username"
+                      name="uname"
+                      required
+                    />
+
+                    <label for="psw"><b>Password</b></label>
+                    <input
+                      type="password"
+                      placeholder="Enter Password"
+                      name="psw"
+                      required
+                    />
+                    <button class="btns" type="submit">Login</button>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        name="remember"
+                      />
+                      Remember me
+                    </label>
+                  </div>
+
+                  <div class="container" style="background-color: #f1f1f1">
+                    <button
+                      type="button"
+                      onclick="document.getElementById('id01').style.display='none'"
+                      class="cancelbtn"
+                    >
+                      Cancel
+                    </button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+      </nav>
+
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div class="all-text">
+              <h1>Welcome to Our<span class="span1"> Website</span></h1>
+              <h2>This is my Business Catalogue<br />Website 2023</h2>
+            </div>
+
+            <img src="img/world.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption align-item-center d-none d-md-block">
+              <h5>Welcom To You. My Business Website</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="all-text2">
+              <h1>Client Project<span class="span1"> to Office</span></h1>
+              <h2>This is my Business Catalogue<br />Website 2023</h2>
+            </div>
+            <img src="card/office time.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption align-item-center d-none d-md-block">
+              <h5>Welcom To You. My Business Website</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <div class="all-text3">
+              <h1>Project Coding<span class="span1"> At Home</span></h1>
+              <h2>This is my Business Catalogue<br />Website 2023</h2>
+            </div>
+            <img src="img/Home codding.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption align-item-center d-none d-md-block">
+              <h5>Welcom To You. My Business Website</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="all-text4">
+              <h1>Md.Johirul Islam Rasel<span class="span1"> (CEO)</span></h1>
+              <h2>
+                This is my Business Catalogue Website 2023.Chief Design Officer
+                (CDO), or design executive officer (DEO), is a corporate title
+                sometimes given to an executive in charge of an organization's
+                design initiatives.The position has emerged only recently, with
+                chief design officers taking on roles that may have previously
+                been assumed by a chief marketing officer, chief product
+                officer, chief brand officer or delegated to lower-ranking
+                design executives. As with many other CxO roles it does not
+                necessarily mean the role reports to the CEO.<br /><br /><br />In
+                some companies the title is in name only and does not actually
+                mean the role holder is an executive. Some companies - such as
+                IBM have many CDOs as executives of major divisions within the
+                corporation.
+              </h2>
+            </div>
+            <img
+              id="my-img"
+              src="img/ceo.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+    <!-- ------------------------------------header end--------------------------------- -->
+    <!-- ------------------------------------------section start-------------------------------- -->
+    <section class="section1">
+      <div class="containe">
+        <div class="row py-5 align-items-center">
+          <div class="col-lg-7 px-5">
+            <img
+              class="img-fluid"
+              id="offic-img"
+              src="card/office time.png"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-5">
+            <h1 class="text-center">Office Time to Offic Time</h1>
+            <p class="text-left">
+              A computer operator is a role in IT which oversees the running of
+              computer systems, ensuring that the machines, and computers are
+              running properly.[1] The job of a computer operator as defined by
+              the United States Bureau of Labor Statistics is to "monitor and
+              control ... and respond to ... enter commands ... set controls on
+              computer and peripheral devices. This Excludes Data Entry
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center py-5">Our Package</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            accusamus! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae obcaecati molestiae deserunt ipsum officia unde rem
+            omnis. Dicta officia a consequuntur. Obcaecati perspiciatis ipsam
+            culpa maxime. Reprehenderit eos qui tempore?
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            accusamus! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae obcaecati molestiae deserunt ipsum officia unde rem
+            omnis. Dicta officia a consequuntur. Obcaecati perspiciatis ipsam
+            culpa maxime. Reprehenderit eos qui tempore?
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            accusamus! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae obcaecati molestiae deserunt ipsum officia unde rem
+            omnis. Dicta officia a consequuntur. Obcaecati perspiciatis ipsam
+            culpa maxime. Reprehenderit eos qui tempore?
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            accusamus! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Recusandae obcaecati molestiae deserunt ipsum officia unde rem
+            omnis. Dicta officia a consequuntur. Obcaecati perspiciatis ipsam
+            culpa maxime. Reprehenderit eos qui tempore?
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center py-5">Happy Clients says</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 18rem">
+              <img src="card/office.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 18rem">
+              <img src="card/office.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 18rem">
+              <img src="card/office.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center py-5">Frequently Asked Questions</h1>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid" src="card/office.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-primary px-5 py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam
+          accusamus voluptatem nobis sit explicabo repudiandae saepe pariatur
+          totam, voluptate neque, porro animi et dolor ea tempora. Beatae sequi
+          unde consequatur quis rerum, in numquam dolore dicta cupiditate
+          molestias quae corrupti pariatur natus doloremque illo, at, nam illum
+          placeat. Iste, exercitationem.
+        </div>
+        <div class="col-lg-6">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+          suscipit facilis fugiat, inventore voluptates accusantium repellendus,
+          aspernatur quaerat illo, officiis incidunt dolorum. Nam eaque
+          molestiae illo aperiam ullam pariatur odit voluptas architecto itaque
+          obcaecati quibusdam rerum, deleniti quia recusandae quisquam minima
+          alias animi amet. At id ullam obcaecati! Velit, molestiae.
+        </div>
+      </div>
+    </footer>
+    <!-- ===============================================section end=================================== -->
+    <script>
+      var navlinks = document.getElementById("nav-links");
+
+      function showmenu() {
+        navlinks.style.right = "0";
+      }
+      function hidemenu() {
+        navlinks.style.right = "-300px";
+      }
+    </script>
+    <!-- -------------------------------bootsrtap js link------------------------------------ -->
+    <script src="bootstrap-link/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
